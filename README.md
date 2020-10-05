@@ -1,12 +1,12 @@
-# atRentals
+# @Rentals
 
 **MERN styled website** serving as a platform for **Book Renting** with least costs involved as one needs to pay just shipping &amp; minimal day wise rental charges.
 
 ## Technologies Used:
 
-Front End : ReactJS, HTML, CSS, Bootstrap
-Back End : NodeJS, ExpressJS, JWT
-Database : MongoDB
+- Front End : ReactJS, HTML, CSS, Bootstrap
+- Back End : NodeJS, ExpressJS, JWT
+- Database : MongoDB
 
 ## Functionality
 
@@ -44,7 +44,7 @@ Database : MongoDB
 
 ## Back-end Plan:
 
-![Backend Image](https://github.com/CoolCoderz/atRentals/Backend/temp_assets/aRentalsBackend.png)
+![Backend Image](https://github.com/CoolCoderz/atRentals/blob/main/Backend/temp_assets/aRentalsBackend.png)
 
 ## Installation and Execution:
 
