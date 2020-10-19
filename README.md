@@ -1,3 +1,4 @@
+
 # @Rentals
 
 **MERN styled website** serving as a platform for **Book Renting** with least costs involved as one needs to pay just shipping &amp; minimal day wise rental charges.
@@ -40,7 +41,15 @@
 
 ## UI Design/ Layout:
 
-[Basic planned layout of pages](https://framer.com/projects/Rentals--7zKPZS5bnrThwsvXZGFN-9r5fz)
+[Basic planned layout of pages](https://framer.com/projects/Rentals--7zKPZS5bnrThwsvXZGFN-9r5fz) 
+
+[Figma file for design](https://www.figma.com/file/Ar1zul3zdmNfNt729D9U6o/RentUI?node-id=46%3A2)
+![Desing prototype](https://github.com/AnjanaMA/atRentals/blob/main/RentUI.gif)
+
+
+
+
+
 
 ## Back-end Plan:
 
