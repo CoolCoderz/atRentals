@@ -7,6 +7,7 @@ const app = express();
 
 
 const authRoutes = require("./routes/auth");
+
 //DATABASE CONNECTION
 mongoose.connect("mongodb://localhost:27017/product",
 {
