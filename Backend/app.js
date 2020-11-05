@@ -5,9 +5,9 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const app = express();
 
-
+// Importing Routes
 const authRoutes = require("./routes/auth");
-
+const userRoutes = require("./routes/user");
 //DATABASE CONNECTION
 mongoose.connect("mongodb://localhost:27017/product",
 {
@@ -26,7 +26,7 @@ app.use(cors());
 
 // ROUTES
 app.use("/api",authRoutes);
-
+app.use("/api", userRoutes);
 //PORT
 const PORT = 5000;
 
