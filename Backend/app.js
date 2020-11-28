@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 const express =  require("express");
 const bodyParser = require("body-parser");
@@ -8,8 +9,9 @@ const app = express();
 // Importing Routes
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
+const categoryRoutes = require("./routes/category")
 //DATABASE CONNECTION
-mongoose.connect("mongodb://localhost:27017/product",
+mongoose.connect(process.env.DATABASE,
 {
     useNewUrlParser: true,
     useNewUrlParser: true,
@@ -27,6 +29,7 @@ app.use(cors());
 // ROUTES
 app.use("/api",authRoutes);
 app.use("/api", userRoutes);
+app.use("/api",categoryRoutes);
 //PORT
 const PORT = 5000;
 
