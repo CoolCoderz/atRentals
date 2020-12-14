@@ -1,0 +1,360 @@
+<html>
+
+<head>
+    <title>atRentals</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
+    <style>
+        body {
+            background-color: #ececec;
+            color: #444444;
+            padding: 0;
+            margin: 0;
+            perspective: 1px;
+            transform-style: preserve-3d;
+            height: 100%;
+            overflow-x: hidden;
+            font-family: "Roboto";
+        }
+        
+        .left-underline {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .left-underline:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background: #ececec;
+            height: 4px;
+            -webkit-transition-property: right;
+            transition-property: right;
+            -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+        
+        .left-underline:hover:before,
+        .left-underline:focus:before,
+        .left-underline:active:before {
+            right: 0;
+        }
+        
+        div.navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #bee088;
+            -webkit-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.75);
+            z-index: 9999999;
+        }
+        
+        div.navbar>ul.navbar-container {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 1em;
+            padding-right: 1em;
+            overflow: hidden;
+        }
+        
+        div.navbar>ul>li.nav-item {
+            float: right;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+        
+        div.navbar>ul>li.active {
+            background-color: rgba(0, 0, 0, 0.18);
+        }
+        
+        div.navbar>ul>li:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        a.nav-button {
+            font-family: "Roboto";
+            text-decoration: none;
+            line-height: 60px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: rgba(228, 241, 254, 1);
+            transition: all 0.5s ease;
+        }
+        
+        a.nav-button:hover {
+            text-decoration: none;
+        }
+        
+        li.active>a.nav-button {
+            cursor: default;
+        }
+        
+        .brand-logo {
+            float: left;
+            cursor: default;
+        }
+        
+        .parallax {
+            height: 70vh;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .parallax.p1 {
+            background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-70374.jpg) no-repeat fixed 50% 0;
+            background-size: cover;
+            color: #fff;
+        }
+        
+        .parallax.p2 {
+            background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-126549.jpg) no-repeat fixed 50% 0;
+            background-size: cover;
+            color: #fff;
+        }
+        
+        .parallax.p3 {
+            background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-95766.jpg) no-repeat fixed 70% 0;
+            background-size: cover;
+            color: #fff;
+        }
+        
+        .parallax-text {
+            width: 24em;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            border: 0.5em solid #fff;
+            margin-left: -10%;
+            padding: 2em 0;
+            text-align: center;
+            z-index: 999;
+        }
+        
+        .parallax>div.blur-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        hgroup {
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            border: 5px solid #fff;
+            padding: 0.5em 3em;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+        
+        .row {
+            width: 80%;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            min-height: 150px;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .row>.col-3 {
+            width: 30%;
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+        footer {
+            width: 100%;
+            padding-top: 20px;
+            display: block;
+            background-color: #bee088;
+        }
+        
+        .footer-copyright {
+            font-weight: 300;
+            overflow: hidden;
+            height: 50px;
+            line-height: 50px;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(51, 51, 51, 0.08);
+        }
+        
+        .container {
+            width: 85%;
+            padding: 0 1.5rem;
+            margin: 0 auto;
+            max-width: 1280px;
+        }
+        
+        footer p {
+            border-left: 3px solid #ffcdd2;
+            padding-left: 15px;
+            text-indent: 20px;
+            color: #ececec;
+        }
+    </style>
+
+    <script>
+        function EasyPeasyParallax() {
+            scrollPos = $(this).scrollTop();
+            $(".p1").css({
+                "background-position": "50% " + -scrollPos / 4 + "px",
+            });
+            $(".p2").css({
+                "background-position": "50% " + -scrollPos / 8 + "px",
+            });
+            $(".p3").css({
+                "background-position": "70% " + -scrollPos / 16 + "px",
+            });
+            $(".parallax-text").css({
+                "margin-top": scrollPos / 2 + "px",
+                opacity: 1 - scrollPos / 230,
+            });
+        }
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                EasyPeasyParallax();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css" />
+    <div class="navbar">
+        <ul class="navbar-container">
+            <li>
+                <a href="#" class="left-underline nav-button brand-logo">@Rentals</a>
+            </li>
+            <li class="nav-item">
+                <a href="#section-3" class="left-underline nav-button" data-scroll>Resources</a>
+            </li>
+            <li class="nav-item">
+                <a href="#section-2" class="left-underline nav-button" data-scroll>Prog Schedule</a>
+            </li>
+            <li class="nav-item active">
+                <a href="#section-1" class="left-underline nav-button" data-scroll>Home</a>
+            </li>
+        </ul>
+    </div>
+    <div class="parallax p1" id="section-1">
+        <hgroup>
+            <h1>Welcome.</h1>
+            <h2>Here's atRentals project guide.</h2>
+        </hgroup>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h1>Why we are doing this?</h1>
+            <ul>
+                <li>To build an easy accessible site for Book Lovers</li>
+                <li>To learn web dev along with developing smething useful</li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <h1>What will we learn?</h1>
+            <ul>
+                <li>HTML, CSS, JS/TS</li>
+                <li>VCS- git, hosting- (heroku, netlify),Auth- JWT</li>
+                <li>MERN- Mongo, Express, ReactJS, Node</li>
+                <li>Bootstrap, Material UI, Tailwind CSS, React-Strap</li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <h1>How can one join?</h1>
+            <ul>
+                <li>Raising a PR <a href="" target="_blank">here</a></li>
+                <li>OR Being a part of <a href="http://wootech.slack.com/" target="_blank">Wootech</a></li>
+                <li>Ping to know more:</li>
+
+                <li>
+                    <a href="https://linkedin.com/in/AasthaMehtaTech" target="_blank">LinkedIn</a> ,
+                    <a href="mailto:aasthamehta2704@gmail.com?subject=Interested in atRentals Proj" target="_blank">aasthamehta2704@gmail.com</a> or
+                    <a href="https://github.com/AasthaGithub" target="_blank">Github</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="parallax p2" id="section-2">
+        <hgroup>    
+            <h2>Rough Program Schedule</h2>
+        </hgroup>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h1>Phase 1</h1>
+            <h3>Basic Tools & Web tech</h3>
+             <li>HTML, CSS, JS/TS</li>
+             <li>VCS (git), Postman</li>
+             <li>Node Basics </li>
+             <li>JSX</li>
+        </div>
+        <div class="col-3">
+            <h1>Phase 2</h1>
+            <h3>React- Fundamentals </h3>
+            <li>React Components- Fn, Class </li>
+             <li>Props, State</li>
+             <li>Conditional Rendering, Lifecycle</li>
+             <li>Basic Forms</li>             
+        </div>
+        <div class="col-3">
+            <h1>Phase 3</h1>
+            <h3>React- Advance & Ecosystem </h3>
+            <li>Context, Higher Order Components</li>
+            <li>HTTP Requests</li>
+            <li>Hooks</li>
+            <li>State Mngmt- Redux</li>
+            <li>Routing, Formik, Styling, Testing</li>
+        </div>
+    </div>
+   <center><img src="https://github.com/AasthaGithub/TestGit/blob/master/images/reactRoadmap.jpeg?raw=true" 
+   alt="https://github.com/AasthaGithub/TestGit/blob/master/images/reactRoadmap.jpeg"></center>
+    <div class="parallax p3">
+        <hgroup>
+            <h1>Resources</h1>
+            <h2>Linked in Doc Below</h2>
+        </hgroup>
+    </div>
+    <footer>
+        <div class="row" id="section-3">
+            <div class="col-3">
+                <a href="https://docs.google.com/document/d/1PxGygURNqf2GfvAySMx4oZYDeqnmDTxB53M4P1LH0k4/edit?usp=sharing">Document Link</a>
+                <p> Has resources linked</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © atRentals, All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
