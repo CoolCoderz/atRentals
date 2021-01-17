@@ -1,13 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
 .form{
     position: absolute;
   width: 569px;
   height: 553px;
   left: 65px;
-  display:flex;
   background: #F3F3F3;
+  display: block;
   border-radius: 28px;
   }
-  
+
+  input[type=text], select, textarea {
+    width: auto;
+    resize: vertical;
+  }
+
   .left1{
     margin: 78px 348px 446px 60px;
     position: absolute;
