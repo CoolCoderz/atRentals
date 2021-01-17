@@ -204,7 +204,7 @@
   
   /*style the items (options), including the selected item:*/
   .select-items div,.select-selected {
-    color: #00000;
+    color: #000000;
     padding: 8px 16px;
      
     cursor: pointer;
