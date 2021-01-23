@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&display=swap");
+* {
+	  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+}
+
+.card{
+position: relative;
+width: 40vw;
+height: 85vh;
+left: 3vw;
+display:flex;
+background: #F3F3F3;
+border-radius: 28px;
+
+}
+
+@media only screen and (min-width: 1000px) 
+{
+.rectangle{
+position:relative;
+width: 1300px;
+height: 80px;
+text-align: center;
+top: 260px;
+background: #F48787;
+}
+#line1{
+	position: absolute;
+width: 15vw;
+height: 25vh;
+margin-left: 42vw;
+top: 250px;
+z-index: 1;
+background: #F48787;
+border-radius: 24px;
+text-align: center;
+padding: 18px 0;
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 120%;
+line-height: 29px;
+
+}
+
+
+}
+@media only screen and (max-width: 1000px) { 
+  .rectangle { 
+    display: none; 
+  }
+  #line1{
+  position: absolute;
+width: 25vw;
+height: 30vh;
+margin-left: 42vw;
+z-index: 1;
+background: #F48787;
+border-radius: 24px;
+text-align: center;
+padding: 18px 0;
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 120%;
+line-height: 29px;	
+  }
+  .card{
+    margin-top: 150px;
+   margin-left: 15vw;
+   width: 70vw;
+   height: 90vh;
+ } 
+}
+.card-text{
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 4vh;
+line-height: 5vh;
+margin-left: 5%;
+color: #000000;
+}
+.card-title{
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+text-align: center;
+
+color: #000000;
+
+}
