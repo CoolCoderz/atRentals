@@ -36,10 +36,11 @@ const bookSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        category:{
-            type: String,
-            required: true,
-        },
+        category:[
+            {
+            Name : {type:String, required:true},
+            }
+    ],
         description:{
             type: String,
             required: true,
