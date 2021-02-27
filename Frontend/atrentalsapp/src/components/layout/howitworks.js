@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
-import { Button, Row, Col, Card, CardText, CardTitle } from "reactstrap";
+import { Row, Col, Card, CardText, CardTitle } from "reactstrap";
 
-function App() {
+const HowItWorks = (props) => {
   return (
     <div>
       <div className="first">
@@ -32,7 +32,7 @@ function App() {
         <Col sm="6">
           <Card body className="box">
             <CardTitle className="guide" tag="h5">
-               LEASERS GUIDE
+              LEASERS GUIDE
             </CardTitle>
             <CardText className="lines">
               How to put book on rent
@@ -52,7 +52,6 @@ function App() {
       </Row>
     </div>
   );
-}
+};
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+export default HowItWorks;
