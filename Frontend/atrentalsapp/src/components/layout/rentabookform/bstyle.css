@@ -1,0 +1,301 @@
+.form{
+  position: absolute;
+width: 569px;
+height: 553px;
+left: 65px;
+display:flex;
+background: #F3F3F3;
+border-radius: 28px;
+}
+
+.left1{
+  margin: 78px 348px 446px 60px;
+  position: absolute;
+width: 161px;
+height: 29px;
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+color: #000000;
+}
+
+.box1{
+  margin: 74px 110px 433px 237px;
+  position: absolute;
+width: 222px;
+height: 46px;
+background: rgba(233, 210, 210, 0.89);
+border-radius: 14px;
+ border: none;
+  font-family: Bitter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+}
+
+.vector1{
+  margin: 19px 17.5px 20px 183px;
+  position: absolute;
+width: 19px;
+height: 9.5px;
+border: 3px solid #F48787;
+}
+
+.left2{
+  margin: 161px 396px 363px 60px;
+  position: absolute;
+width: 113px;
+height: 29px;
+
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+color: #000000;
+}
+
+.box2{
+  margin: 153px 147px 354px 334px;
+  position: absolute;
+width: 153px;
+height: 46px;
+background: rgba(233, 210, 210, 0.89);
+border-radius: 14px;
+ border:none;
+}
+
+
+.vector2{
+  margin: 19px 17.5px 20px 114px;
+  position: absolute;
+width: 19px;
+height: 9.5px;
+border: 3px solid #F48787;
+}
+
+.left3{
+  margin: 247px 430px 277px 60px;
+  position: absolute;
+width: 85px;
+height: 29px;
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+color: #000000;
+}
+
+.box3{
+  margin: 239px 142px 268px 274px;
+  position: absolute;
+width: 153px;
+height: 46px;
+border:none;
+background: rgba(233, 210, 210, 0.89);
+border-radius: 14px;
+}
+
+.vector3{
+  margin: 19px 17.5px 20px 114px;
+  position: absolute;
+width: 19px;
+height: 9.5px;
+border: 3px solid #F48787;
+}
+
+.left4{
+  margin: 328px 352px 196px 60px;
+  position: absolute;
+width: 157px;
+height: 29px;
+
+font-family: Bitter;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+
+.box4{
+  margin: 320px 78px 187px 274px;
+  position: absolute;
+width: 217px;
+height: 46px;
+background: rgba(233, 210, 210, 0.89);
+border-radius: 14px;
+  border:none;
+}
+
+.last_rectangle{
+  margin: 438px 142px 72px 160px;
+  position: absolute;
+width: 221px;
+height: 43px;
+border: 3px solid #F48787;
+box-sizing: border-box;
+border-radius: 24px;
+}
+
+.last_text{
+  position: absolute;
+font-family: Bitter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+color: #000000;
+}
+
+.custom-select {
+  position: absolute;
+   margin: 74px 110px 433px 237px;
+  width: 222px;
+height: 46px;
+background: rgba(233, 210, 210, 0.89);
+border-radius: 14px;
+ border: none;
+  font-family: Bitter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+ 
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background: #E9D2D2 89%;
+  border-radius:14px;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  border-color:  #F48787 transparent transparent transparent;;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent  #F48787 transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #00000;
+  padding: 8px 16px;
+   
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background: #E9D2D2 89%;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background: #F48787;
+
+}
+ 
+input[type="date"] {
+  display:block;
+  position:absolute;
+  padding-left: 0.5rem;
+  width: 153px;
+height: 46px;
+  font-size:1rem;
+  font-family:bitter;
+  margin-left: 250px;
+  border:none;
+  border-radius: 14px;
+  background:
+    rgba(233, 210, 210, 0.89)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22' viewBox='0 0 20 22'%3E%3Cg fill='none' fill-rule='evenodd' stroke='palevioletred' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'%3E%3Crect width='18' height='18' y='2' rx='2'/%3E%3Cpath d='M13 0L13 4M5 0L5 4M0 8L18 8'/%3E%3C/g%3E%3C/svg%3E")
+    right 1rem
+    center
+    no-repeat;
+  
+  cursor:pointer;
+}
+input[type="date"]:focus {
+  outline:none;
+  border-color:#3acfff;
+  box-shadow:0 0 0 0.25rem rgba(0, 120, 250, 0.1);
+}
+
+::-webkit-datetime-edit {}
+::-webkit-datetime-edit-fields-wrapper {}
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-year-field:hover {
+  background:rgba(0, 120, 250, 0.1);
+}
+::-webkit-datetime-edit-text {
+  opacity:0;
+}
+::-webkit-clear-button,
+::-webkit-inner-spin-button {
+  display:none;
+}
+::-webkit-calendar-picker-indicator {
+  position:absolute;
+  width:2.5rem;
+  height:100%;
+  top:0;
+  right:0;
+  bottom:0;
+  
+  opacity:0;
+  cursor:pointer;
+  
+  color:rgba(0, 120, 250, 1);
+  background:rgba(0, 120, 250, 1);
+ 
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator { opacity:0.05; }
+input[type="date"]:hover::-webkit-calendar-picker-indicator:hover { opacity:0.15; }
+
+
+
+
+  
+ 
+
+
+  
+  

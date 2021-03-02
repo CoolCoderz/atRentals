@@ -1,0 +1,26 @@
+.guide{
+  text-align: center;
+}
+.box {
+  background: #f3f3f3;
+  margin-top: 20px;
+  height: 350px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 28px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px gray;
+}
+
+.first {
+  text-align: center;
+  background: #f48787;
+}
+.lines {
+  font-family: Bitter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 120%;
+  line-height: 29px;
+}
