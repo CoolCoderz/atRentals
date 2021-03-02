@@ -1,15 +1,8 @@
-<!doctype html>
+import "./styles.css";
 
-<html>
-	<head>
-		<title>Page Title</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css"></link>
-	</head>
-
-	<body>
-        <section>
+export default function Createbook() {
+  return (
+    <section>
   <div class="card-wrapper">
     <div class="card-title">
       <p>Create new book</p>
@@ -49,6 +42,5 @@
 
   </div>
 </section>
-
-	</body>
-</html>
+  );
+}
